@@ -9,8 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Yuki INOUE"]
   spec.email         = ["inoueyuworks@gmail.com"]
 
-  spec.summary       = %q{foo bar}
-  spec.description   = %q{piyopiyo}
+  spec.summary       = %q{Start circleci mysql docker dead easy.}
+  spec.description   = <<~DESC
+    Read configuration of `config/database.yml`, use that information to launch a circleci mysql docker image.
+  DESC
   spec.homepage      = 'https://github.com/Yuki-Inoue/gem-dockerci'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
