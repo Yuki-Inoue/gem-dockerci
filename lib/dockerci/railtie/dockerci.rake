@@ -8,7 +8,8 @@ namespace :dockerci do
     cmd += ['--name', db_name]
     cmd += ['-e', "MYSQL_DATABASE=#{db_name}"]
     img_name = 'circleci/mysql'
-    tag = Rails.application.config.dockerci_mysql_version
+    tag = Rails.application.config.dockerci_mysql_version ||
+          ENV['DOCKERCI_MYSQL_VERSION']
     img_name += ':' + tag if tag
     cmd << img_name
     exec(*cmd)
